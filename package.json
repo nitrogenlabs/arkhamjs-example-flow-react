@@ -1,6 +1,6 @@
 {
   "name": "@nlabs/arkhamjs-example-flow-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ArkhamJS React Flow Example App",
   "license": "MIT",
   "keywords": [
@@ -47,12 +47,6 @@
     "react-dom": "^16.3.2"
   },
   "devDependencies": {
-    "@types/history": "^4.6.2",
-    "@types/jest": "^22.2.3",
-    "@types/node": "^10.0.3",
-    "@types/prop-types": "^15.5.2",
-    "@types/react": "^16.3.12",
-    "@types/react-dom": "^16.0.5",
     "react-test-renderer": "^16.3.2"
   }
 }
