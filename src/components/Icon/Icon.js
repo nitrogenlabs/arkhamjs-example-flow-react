@@ -1,20 +1,11 @@
-import * as PropTypes from 'prop-types';
-import * as React from 'react';
-import {Component, ComponentProps} from '../Component/Component';
 import './icon.css';
 
-export type IconProps = ComponentProps & {
-  name: string;
-  size: string;
-}
+import * as React from 'react';
+
+import {Component} from '../Component/Component';
+import type {IconProps} from '../../types/components';
 
 export class Icon extends Component<IconProps> {
-  static propTypes: object = {
-    ...Component.propTypes,
-    name: PropTypes.string.isRequired,
-    size: PropTypes.string
-  };
-
   static defaultProps: object = {
     ...Component.defaultProps,
     size: ''
@@ -30,7 +21,7 @@ export class Icon extends Component<IconProps> {
     const size = propSize.toLowerCase();
 
     if(size !== '') {
-      styleClasses.push('icon-' + size);
+      styleClasses.push(`icon-${size}`);
     }
 
     return styleClasses;

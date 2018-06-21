@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as renderer from 'react-test-renderer';
+
 import {Icon} from './Icon';
 
 describe('Icon', () => {
@@ -9,7 +10,5 @@ describe('Icon', () => {
     rendered = renderer.create(<Icon name="pencil"/>);
   });
 
-  it('should render', () => {
-    return expect(rendered).toBeDefined();
-  });
+  it('should render', () => expect(rendered).toBeDefined());
 });

@@ -1,18 +1,7 @@
-import {get, merge} from 'lodash';
+import get from 'lodash/get';
+import merge from 'lodash/merge';
 
-export type AppConfig = {
-  appId: string;
-  appName: string;
-  env: string;
-}
-
-export type EnvConfig = {
-  default: AppConfig;
-  development: AppConfig;
-  preprod: AppConfig;
-  production: AppConfig;
-  test: AppConfig;
-}
+import type {EnvConfig} from '../types/config';
 
 export class Config {
   static values: EnvConfig = {

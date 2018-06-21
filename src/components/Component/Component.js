@@ -1,16 +1,9 @@
-import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-export type ComponentProps = {
-  className: string;
-}
+import type {ComponentProps} from '../../types/components';
 
 export class Component extends React.Component<ComponentProps, {}> {
   name: string;
-  
-  static propTypes: object = {
-    className: PropTypes.string
-  };
 
   static defaultProps: object = {
     className: ''

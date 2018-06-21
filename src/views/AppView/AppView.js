@@ -1,18 +1,17 @@
+import './appView.css';
+
 import {Logger, LoggerDebugLevel} from '@nlabs/arkhamjs-middleware-logger';
 import {BrowserStorage} from '@nlabs/arkhamjs-storage-browser';
 import {Flux} from 'arkhamjs';
 import * as React from 'react';
-import {AppStore} from '../../stores';
+
+import {AppActions} from '../../actions/AppActions/AppActions';
+import {Icon} from '../../components/Icon/Icon';
 import {Config} from '../../config';
-import {AppActions} from '../../actions';
-import {Icon} from '../../components';
 import {AppConstants} from '../../constants/AppConstants';
 import {StringService} from '../../services/StringService/StringService';
-import './appView.css';
-
-export interface AppViewState {
-  content: string;
-}
+import {AppStore} from '../../stores/AppStore/AppStore';
+import type {AppViewState} from '../../types/views';
 
 export class AppView extends React.Component<{}, AppViewState> {
   input: HTMLInputElement;
@@ -81,7 +80,7 @@ export class AppView extends React.Component<{}, AppViewState> {
             </div>
             <div className="helloTxt">{StringService.uppercaseWords(this.state.content)}</div>
             <div className="form">
-              <input ref={(r: HTMLInputElement) => this.input = r} type="text" name="test" />
+              <input ref={(ref: HTMLInputElement) => this.input = ref} type="text" name="test" />
               <button className="btn btn-primary" onClick={this.onChange}>
                 <Icon name="pencil" className="btnIcon" />
                 UPDATE
