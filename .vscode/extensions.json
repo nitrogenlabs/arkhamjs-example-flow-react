@@ -1,20 +1,20 @@
 {
   "enabled": [
-    "streetsidesoftware.code-spell-checker",
-    "bierner.markdown-preview-github-styles",
-    "DavidAnson.vscode-markdownlint",
-    "ricard.postcss",
-    "shinnn.stylelint"
-  ],
-  "recommendations": [
-    "streetsidesoftware.code-spell-checker",
-    "bierner.markdown-preview-github-styles",
-    "DavidAnson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
     "ricard.postcss",
     "shinnn.stylelint",
+    "streetsidesoftware.code-spell-checker",
+    "bierner.markdown-preview-github-styles",
+    "DavidAnson.vscode-markdownlint"
+  ],
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "ricard.postcss",
+    "shinnn.stylelint",
+    "streetsidesoftware.code-spell-checker",
+    "bierner.markdown-preview-github-styles",
+    "DavidAnson.vscode-markdownlint",
     "flowtype.flow-for-vscode",
-    "eg2.tslint",
-    "rbbit.typescript-hero",
     "Equinusocio.vsc-material-theme",
     "PKief.material-icon-theme"
   ]
