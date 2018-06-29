@@ -4,6 +4,7 @@ import {Logger, LoggerDebugLevel} from '@nlabs/arkhamjs-middleware-logger';
 import {BrowserStorage} from '@nlabs/arkhamjs-storage-browser';
 import {Flux} from 'arkhamjs';
 import * as React from 'react';
+import {hot} from 'react-hot-loader';
 
 import {AppActions} from '../../actions/AppActions/AppActions';
 import {Icon} from '../../components/Icon/Icon';
@@ -13,7 +14,7 @@ import {StringService} from '../../services/StringService/StringService';
 import {AppStore} from '../../stores/AppStore/AppStore';
 import type {AppViewState} from '../../types/views';
 
-export class AppView extends React.Component<{}, AppViewState> {
+export class AppViewBase extends React.Component<{}, AppViewState> {
   input: HTMLInputElement;
 
   constructor(props) {
@@ -92,3 +93,5 @@ export class AppView extends React.Component<{}, AppViewState> {
     );
   }
 }
+
+export const AppView = hot(module)(AppViewBase);
